@@ -1,5 +1,16 @@
 /* This is a comment test */
 <style>
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+p {
+  font-family: verdana;
+  font-size: 25px;
+}
+
 * {
   box-sizing: border-box;
 }
