@@ -34,3 +34,13 @@ body {
   height: 100vh; 
   overflow: hidden; 
 }
+
+
+.centered-bottom {
+  margin-bottom: 10px; /* Optional: space from the bottom */
+  text-align: center;   /* Center text inside the div */
+}
+
+p {
+  color: white;
+}
