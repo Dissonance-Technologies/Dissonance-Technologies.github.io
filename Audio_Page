@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="Vapor_background.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Welcome to Dissonance Technologies LLC (DTL)</h1>
+  <p>Hello World!</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+  <audio controls> 
+    <src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg"></audio>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<img src="Puppy_Test.jpg" alt="Puppy Test">
+</body>
+</html>
