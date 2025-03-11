@@ -20,36 +20,17 @@ body {
   font-size: 17px;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  object-fit: cover;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
 }
 
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
-
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
+body {
+  background-image: url('walking.gif');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  height: 100vh; 
+  overflow: hidden; 
 }
