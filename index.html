@@ -13,35 +13,10 @@
   <h1>Welcome to Dissonance Technologies LLC (DTL)</h1>
   <p>Welcome to our webpage!</p>
   <p><a href="https://dissotech.net/audio">Visit our audio player!</a></p>
-  
-  <!-- Play/Pause Button -->
-  <button id="myBtn" onclick="myFunction()">Play</button>
 </div>
-
-<!-- Video Background -->
-<video autoplay muted loop id="myVideo">
-  <source src="walking.gif" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
 
 <!-- Image -->
 <img src="Puppy_Test.jpg" alt="Puppy" style="width:128px;height:128px;">
-<img src="Puppy_Test.jpg" alt="Puppy Test">
-
-<script>
-  var video = document.getElementById("myVideo");
-  var btn = document.getElementById("myBtn");
-
-  function myFunction() {
-    if (video.paused) {
-      video.play();
-      btn.innerHTML = "Pause";
-    } else {
-      video.pause();
-      btn.innerHTML = "Play";
-    }
-  }
-</script>
 
 </body>
 </html>
