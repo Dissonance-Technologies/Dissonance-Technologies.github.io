@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-  
 <head>
-<link rel="stylesheet" href="style.css">  
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Welcome to Dissonance Technologies LLC (DTL)</title>
 </head>
 
 <body>
@@ -12,30 +12,34 @@
 <div class="content">
   <h1>Welcome to Dissonance Technologies LLC (DTL)</h1>
   <p>Welcome to our webpage!</p>
+  
+  <!-- Play/Pause Button -->
+  <button id="myBtn" onclick="myFunction()">Play</button>
 </div>
 
-<script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
-</script>
-
+<!-- Video Background -->
 <video autoplay muted loop id="myVideo">
   <source src="Vapor_background.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
+<!-- Image -->
 <img src="Puppy_Test.jpg" alt="Puppy Test">
 
+<script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+</script>
 
 </body>
 </html>
