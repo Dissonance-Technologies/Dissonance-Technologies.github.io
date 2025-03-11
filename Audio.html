@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player</title>
+  <script>
+    function myFunction() {
+      var audio = document.getElementById('myAudio');
+      if (audio.paused) {
+        audio.play();
+        document.getElementById('myBtn').innerText = 'Pause';
+      } else {
+        audio.pause();
+        document.getElementById('myBtn').innerText = 'Play';
+      }
+    }
+  </script>
+</head>
 <body>
-<html>
 
 <div>
-<button id="myBtn" onclick="myFunction()">Pause</button>
-<audio controls> 
-<src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg"></audio>
+  <button id="myBtn" onclick="myFunction()">Play</button>
+  <audio id="myAudio" controls>
+    <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
 </div>
-  
-</script>
+
 </body>
 </html>
