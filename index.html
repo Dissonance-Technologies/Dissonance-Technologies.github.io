@@ -6,22 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Welcome to Dissonance Technologies LLC (DTL)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<div>
+<body style="background-color:white;">
+
+  <div id="navbar-container"></div>
+
+   <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => {
+        console.error("Error loading the menu: ", error);
+      });
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</div>
 
 <div class="content">
   <h1>Welcome, Friend!</h1>
-  <h2>You've found the home of <b><i>Dissonance Technologies</b></i>~</h2> 
+  <h2>You've found the home of <b><i>Dissonance Technologies</i></b>~</h2> 
   <p>Relax, stay a while and enjoy our webpage!</p>
-  <p><a href="audio.html">Visit our audio player!</a></p>   <!-- H-Link -->
   <img src="Puppy_Test.jpg" alt="Puppy" style="width:320px;height:213px;">   <!-- Image -->
 </div>
 
 <div class="disclaimer"> <!-- WHY DOES THIS ONLY WORK WITH TWO CLASESS AHHHHH -->
     <h6>*<i>Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development</i>*</h6>
-</div>
-
-</body>
-
+    
+    </div>
+  </body>
 </html>
