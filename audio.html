@@ -3,7 +3,33 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <title>Welcome to We-Hive Radio!</title>
-  <p><a href="index.html">Home</a></p>
+  
+  <div id="navbar-container"></div>
+
+  <script>
+   fetch('menu.html')
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById('navbar-container').innerHTML = data;
+     })
+     .catch(error => {
+       console.error("Error loading the menu: ", error);
+     });
+
+   // Dropdown functionality
+   function myFunction() {
+     document.getElementById("myDropdown").classList.toggle("show");
+   }
+
+   window.onclick = function(e) {
+     if (!e.target.matches('.dropbtn')) {
+       var myDropdown = document.getElementById("myDropdown");
+       if (myDropdown.classList.contains('show')) {
+         myDropdown.classList.remove('show');
+       }
+     }
+   }
+ </script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +46,16 @@
       }
     }
   </script>
+
+<style>
+  body {
+    background-image: url('walking.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+  </style>
+
 </head>
 <body>
 
