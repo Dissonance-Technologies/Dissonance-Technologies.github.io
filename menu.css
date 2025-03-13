@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
+i {
+    color: white;
+}
+
 .dropdown {
     float: left;
     overflow: hidden; 
