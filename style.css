@@ -1,6 +1,18 @@
 /* This is a comment test */
 * {
   color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 a { /* for fun */
@@ -28,10 +40,11 @@ p {
   justify-content: center;
 }
 
-.disclaimer {
+footer {
+  padding: 10px;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: flex-end;   /* Align to the bottom */
-  height: 55%;
+  height: 100%;
   text-align: center;   /* Center text inside the div */
 }
