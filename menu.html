@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <style>
     .navbar {
       overflow: hidden;
@@ -93,3 +94,48 @@
       }
     }
   </script>
+=======
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="menu.css">
+  </head>
+
+
+  <body style="background-color:white;">
+
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="audio.html">Audio Player</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
+    </div>
+
+
+
+    <script>
+      
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>
+>>>>>>> 971c7840ce6f02e3e059c928053ce9379359ca68
