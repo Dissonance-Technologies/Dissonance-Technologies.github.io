@@ -1,112 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<style>
-    .navbar {
-      overflow: hidden;
-      background-color: #333;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  
-    .navbar a {
-      float: left;
-      font-size: 16px;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-  
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-  
-    .dropdown .dropbtn {
-      cursor: pointer;
-      font-size: 16px;  
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
-  
-    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-      background-color: red;
-    }
-  
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-  
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-  
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-  
-    .show {
-      display: block;
-    }
-  </style>
-  
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="#news">News</a>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="myFunction()">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content" id="myDropdown">
-        <a href="audio.html">Audio Player</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div> 
-  </div>
-  
-  <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-  
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-        if (myDropdown.classList.contains('show')) {
-          myDropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
-=======
 
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="menu.css">
   </head>
 
-
   <body style="background-color:white;">
 
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="news.html">News</a>
+
+      <!-- First Dropdown -->
       <div class="dropdown">
         <button class="dropbtn" onclick="myFunction()">Dropdown
           <i class="fa fa-caret-down"></i>
@@ -117,25 +23,61 @@
           <a href="#">Link 3</a>
         </div>
       </div> 
+
+      <!-- Second Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction2()">Dropdown 2
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown2">
+          <a href="#">Link A</a>
+          <a href="#">Link B</a>
+          <a href="about.html">About us</a>
+        </div>
+      </div> 
+
+      <!-- Third Dropdown -->  
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction3()">Dropdown 3
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown3">
+          <a href="#">Link A</a>
+          <a href="#">Link B</a>
+          <a href="#">Link C</a>
+        </div>
+      </div>
     </div>
 
-
-
     <script>
-      
       function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
       }
+
+      function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+      }
+
+      function myFunction3() {
+        document.getElementById("myDropdown3").classList.toggle("show");
+      }
+
       window.onclick = function(e) {
         if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
+          var myDropdown1 = document.getElementById("myDropdown");
+          var myDropdown2 = document.getElementById("myDropdown2");
+          var myDropdown3 = document.getElementById("myDropdown3");
+          if (myDropdown1.classList.contains('show')) {
+            myDropdown1.classList.remove('show');
+          }
+          if (myDropdown2.classList.contains('show')) {
+            myDropdown2.classList.remove('show');
+          }
+          if (myDropdown3.classList.contains('show')) {
+            myDropdown3.classList.remove('show');
           }
         }
       }
     </script>
-
   </body>
 </html>
->>>>>>> 971c7840ce6f02e3e059c928053ce9379359ca68
