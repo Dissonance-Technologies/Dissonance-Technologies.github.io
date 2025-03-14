@@ -6,6 +6,8 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
 html, body {
   height: 100%;
 }
@@ -21,6 +23,7 @@ mark {
   background-color: white;
 }
 
+>>>>>>> 971c7840ce6f02e3e059c928053ce9379359ca68
 h1 { /* Header */
   text-align: center;
   font-size: 50px;

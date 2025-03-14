@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>About Us</title>
+
+    <div id="navbar-container"></div>
+
+    <script>
+     fetch('menu.html')
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById('navbar-container').innerHTML = data;
+       })
+       .catch(error => {
+         console.error("Error loading the menu: ", error);
+       });
+  
+     // Dropdown functionality
+     function myFunction() {
+       document.getElementById("myDropdown").classList.toggle("show");
+     }
+  
+     window.onclick = function(e) {
+       if (!e.target.matches('.dropbtn')) {
+         var myDropdown = document.getElementById("myDropdown");
+         if (myDropdown.classList.contains('show')) {
+           myDropdown.classList.remove('show');
+         }
+       }
+     }
+   </script>
+</head>
+
+<body>
+    <h1>About us</h1>
+    <h2>Dissonance LLC Founded 2025</h2>
+    <P>Insert about the company here</P>
+
+    <h2>Dissonance</h2>
+    <p>Insert about yourself here</p>
+</body>
