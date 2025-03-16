@@ -4,6 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <title>Daily News</title>
+    <div id="navbar-container"></div>
+
+    <script>
+     fetch('menu.html')
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById('navbar-container').innerHTML = data;
+       })
+       .catch(error => {
+         console.error("Error loading the menu: ", error);
+       });
+
+      </script>
 </head>
 
 
