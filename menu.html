@@ -76,7 +76,33 @@
           if (myDropdown3.classList.contains('show')) {
             myDropdown3.classList.remove('show');
           }
+
+          function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
         }
+        
+          // Dropdown functionality 
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+            {
+            var myDropdown = document.getElementById("myDropdown2");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+            {
+            var myDropdown = document.getElementById("myDropdown3");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+            }  
+          }
+        }
+      }
+    }
       }
     </script>
   </body>

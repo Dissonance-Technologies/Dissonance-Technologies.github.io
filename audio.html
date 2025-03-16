@@ -16,27 +16,14 @@
        console.error("Error loading the menu: ", error);
      });
 
-   // Dropdown functionality
-   function myFunction() {
-     document.getElementById("myDropdown").classList.toggle("show");
-   }
-
-   window.onclick = function(e) {
-     if (!e.target.matches('.dropbtn')) {
-       var myDropdown = document.getElementById("myDropdown");
-       if (myDropdown.classList.contains('show')) {
-         myDropdown.classList.remove('show');
-       }
-     }
-   }
- </script>
+      </script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio Player</title>
   
   <script>
-  /*  function myFunction() {
+    function myFunction() {
       var audio = document.getElementById('myAudio');
       if (audio.paused) {
         audio.play();
@@ -45,7 +32,7 @@
         audio.pause();
         document.getElementById('myBtn').innerText = 'Play';
       }
-    } */
+    }
   </script>
 
 <style>
