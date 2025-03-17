@@ -62,11 +62,13 @@
         document.getElementById("myDropdown3").classList.toggle("show");
       }
 
+//    Dropdown  functionality
       window.onclick = function(e) {
         if (!e.target.matches('.dropbtn')) {
           var myDropdown1 = document.getElementById("myDropdown");
           var myDropdown2 = document.getElementById("myDropdown2");
           var myDropdown3 = document.getElementById("myDropdown3");
+
           if (myDropdown1.classList.contains('show')) {
             myDropdown1.classList.remove('show');
           }
@@ -78,28 +80,31 @@
           }
 
           function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
         }
-        
-        // Dropdown functionality 
+      }
+
+//    Dropdown functionality (duplicated?)
       window.onclick = function(e) {
         if (!e.target.matches('.dropbtn')) {
           var myDropdown = document.getElementById("myDropdown");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
           }
+
           var myDropdown = document.getElementById("myDropdown2");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
           }
+          
           var myDropdown = document.getElementById("myDropdown3");
           if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
           }
         }
       }
-    }
-      }
+
     </script>
   </body>
 </html>
