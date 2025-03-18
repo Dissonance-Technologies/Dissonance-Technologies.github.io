@@ -2,7 +2,7 @@
     overflow: hidden;
     background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
-    width: max-content; /* This makes the top bar automatically adjust size */
+    width: 30%;
 }
 
 .navbar a {
@@ -35,9 +35,6 @@ i {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-    background-color: rgb(247, 0, 255);
-}
 
 .dropdown-content {
     display: none;

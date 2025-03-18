@@ -9,10 +9,12 @@
   </head>
 
 
-  <body>
+   <body>
     <div>
-      <div id="navbar-container"></div> 
+      <div id="navbar-container">
+      </div> 
       <script>
+        //Menu functionality
         fetch('menu.html')
           .then(response => response.text())
           .then(data => {
@@ -21,9 +23,26 @@
           .catch(error => {
             console.error("Error loading the menu: ", error);
           });
+          
+    function toggleDropdown(id) {
+      var dropdown = document.getElementById(id);
+      dropdown.classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(function(dropdown) {
+          if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+          }
+        });
+      }
+    };
+ 
       </script>
     </div>
-
+     
     <div class="content">
       <h1>Welcome, Friend!</h1>
       <h2>You've found the home of <mark>Dissonance Technologies</mark>~</h2> 
