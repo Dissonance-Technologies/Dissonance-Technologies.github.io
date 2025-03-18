@@ -3,14 +3,17 @@
 
   <head>
     <meta charset="UTF-8">
+    <title>Menu</title>
     <link rel="stylesheet" href="menu.css">
+    <!-- moved fontAwesome here so it will be available on every page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   </head>
 
-  <body style="background-color:white;">
+  <body>
 
     <div class="navbar">
       <a href="index.html">Home</a>
-      <a href="news.html">News</a>
+      <a href="about.html">About Us</a>
 
       <!-- First Dropdown -->
       <div class="dropdown">
@@ -19,8 +22,8 @@
         </button>
         <div class="dropdown-content" id="myDropdown">
           <a href="audio.html">Audio Player</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="puppy.jpg">puppy</a>
+          <a href="menu.html">menu</a>
         </div>
       </div> 
 
@@ -30,9 +33,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown2">
-          <a href="#">Link A</a>
-          <a href="#">Link B</a>
-          <a href="about.html">About us</a>
+          <a href="README.md">README.md</a>
+          <a href="we-hive.top">We-Hive</a>
+          <a href="news.html">News</a>
         </div>
       </div> 
 
@@ -42,69 +45,72 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown3">
-          <a href="#">Link A</a>
-          <a href="#">Link B</a>
-          <a href="#">Link C</a>
+          <a href="#">I</a>
+          <a href="#">D</a>
+          <a href="#">K</a>
         </div>
       </div>
-    </div>
 
-    <script>
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+    </div> <!-- end navbar div -->
+  </body>
 
-      function myFunction2() {
-        document.getElementById("myDropdown2").classList.toggle("show");
-      }
+  <!-- moved this script outside the body -->  
+  <script> 
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-      function myFunction3() {
-        document.getElementById("myDropdown3").classList.toggle("show");
-      }
+    function myFunction2() {
+      document.getElementById("myDropdown2").classList.toggle("show");
+    }
 
-//    Dropdown  functionality
-      window.onclick = function(e) {
-        if (!e.target.matches('.dropbtn')) {
-          var myDropdown1 = document.getElementById("myDropdown");
-          var myDropdown2 = document.getElementById("myDropdown2");
-          var myDropdown3 = document.getElementById("myDropdown3");
+    function myFunction3() {
+      document.getElementById("myDropdown3").classList.toggle("show");
+    }
 
-          if (myDropdown1.classList.contains('show')) {
-            myDropdown1.classList.remove('show');
-          }
-          if (myDropdown2.classList.contains('show')) {
-            myDropdown2.classList.remove('show');
-          }
-          if (myDropdown3.classList.contains('show')) {
-            myDropdown3.classList.remove('show');
-          }
+//    Dropdown functionality
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown1 = document.getElementById("myDropdown");
+        var myDropdown2 = document.getElementById("myDropdown2");
+        var myDropdown3 = document.getElementById("myDropdown3");
 
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
+        if (myDropdown1.classList.contains('show')) {
+          myDropdown1.classList.remove('show');
+        }
+        if (myDropdown2.classList.contains('show')) {
+          myDropdown2.classList.remove('show');
+        }
+        if (myDropdown3.classList.contains('show')) {
+          myDropdown3.classList.remove('show');
+        }
+
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
         }
       }
+    }
 
 /*    Dropdown functionality (duplicated?)
-      window.onclick = function(e) {
-        if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
 
-          var myDropdown = document.getElementById("myDropdown2");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
+        var myDropdown = document.getElementById("myDropdown2");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
 
-          var myDropdown = document.getElementById("myDropdown3");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
+        var myDropdown = document.getElementById("myDropdown3");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
         }
       }
+    }
 */
-    </script>
-  </body>
+  </script>
+  
 </html>

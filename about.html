@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>About Us</title>
+  <head>
+      <meta charset="UTF-8">
+      <title>About Us</title>
+      <link rel="stylesheet" href="style.css">
 
-    <div id="navbar-container"></div>
 
-    <script>
-     fetch('menu.html')
-       .then(response => response.text())
-       .then(data => {
-         document.getElementById('navbar-container').innerHTML = data;
-       })
-       .catch(error => {
-         console.error("Error loading the menu: ", error);
-       });
-  
-      </script>
-</head>
+      <div id="navbar-container"></div>
 
-<body>
-    <h1>About us</h1>
-    <h2>Dissonance LLC Founded 2025</h2>
-    <P>Insert about the company here</P>
+      <script>
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => {
+          console.error("Error loading the menu: ", error);
+        });
+    
+        </script>
+  </head>
 
-    <h2>Dissonance</h2>
-    <p>Insert about yourself here</p>
-</body>
+  <body>
+      <h1>About us</h1>
+      <h2><mark>Dissonance Technologies</mark> LLC. ~ EST. 2025</h2>
+      <P>
+        We're a technology company based out of the Akron-Canton area of Ohio. I established <mark>Dissonance Technologies</mark> as a
+        way to get involved in the community and give back through use of my team's expertise. 
+      </P>
+      <p>
+        As a team, we are capable of a lot, including but not limited to-
+        <li>Computer Repair, <mark>Custom Gaming Computer Builds, Custom Keyboards</mark></li>
+        <li><mark>Networking</mark> Projects, eg. Firewall, Router, Switch & Server - Instalation / management</li> 
+        <li><mark>Web</mark> Design, Hosting, Management, Transfer, Etc.</li>
+        <li><mark>Safety Classes</mark> for office Cybersecurity practices - <mark>YOUR EMPLOYEES ARE YOUR BIGGEST THREAT, TRAIN THEM.</mark> </li>
+        <li><mark>IT Consulting</mark> for streamlining your businesses workflow</li>
+        <li><mark>SaaS</mark> - AKA, Software as a service</li>
+        <li><mark>Managed IT Services</mark></li>
+      </p>
+
+      <h2>Cody "Dissonance"</h2>
+      <p>Community-minded Eagle Scout, Dual majored in Networking & Cyber Security, Here to help you with your next project!</p>
+
+      <h2>Tom "Hawkeye"</h2>
+      <p>!@#!@$!@$!@#!@#!@$</p>
+
+      <h2>May "May"</h2>
+      <p>!@#!@$!@$!@#!@#!@$</p>
+
+      <h2>Noah "Strife"</h2>
+      <p>Delivery Driver, Fleet Maintenance, Moral Support</p>
+      
+  </body>
+  <footer>
+    <div class="disclaimer"> <!-- THIS MUST BE OUTSIDE THE BODY -->
+      <h6>*<mark>Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development</mark>*</h6>    
+    </div>
+  </footer>
+</html>

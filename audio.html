@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <title>Welcome to We-Hive Radio!</title>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="audio.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Issa' Good Vibe Today</title>
+  </head>
+
   
+
   <div id="navbar-container"></div>
 
   <script>
@@ -15,53 +22,54 @@
      .catch(error => {
        console.error("Error loading the menu: ", error);
      });
-
-      </script>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audio Player</title>
+  </script>
   
   <script>
-    function myFunction() {
-      var audio = document.getElementById('myAudio');
-      if (audio.paused) {
-        audio.play();
-        document.getElementById('myBtn').innerText = 'Pause';
+    var volumeSlider = document.getElementById("volumeSlider");
+    var a = 0;
+    
+
+    function radio() {
+      var Radio = document.getElementById('myRadio');
+      if (Radio.paused) {
+        Radio.volume = 0.5
+        Radio.play();
+        document.getElementById('radioBtn').innerText = 'Pause';
       } else {
-        audio.pause();
-        document.getElementById('myBtn').innerText = 'Play';
+        Radio.pause();
+        document.getElementById('radioBtn').innerText = 'Play';
       }
+      
+      var volumeSlider = document.getElementById("volumeSlider");
+      volumeSlider.addEventListener("change", function() { 
+        a = volumeSlider.value;
+        volumeSlider.innerHTML = "the js variable 'a' currently = " + a;
+        Radio.volume = parseFloat((a / 100).toFixed(2));
+      })
     }
+
+
+    
   </script>
 
-<style>
-  body {
-    background-image: url('walking.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
-  }
-  a { /* for fun */
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  </style>
+  <body>
+    <div>
+      <button id="radioBtn" onclick="radio()">Play</button>      
+      <div>
+        <input type="range" id="volumeSlider" name="Volume" min="0" max="99" value="1"/>
+        
+      </div>
+      <audio id="myRadio">
+        <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
 
-</head>
-<body>
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </body>
 
-<div>
-  <button id="myBtn" onclick="myFunction()">Play</button>
-  <audio id="myAudio" controls>
-    <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-
-</body>
+  <footer>
+    <div class="disclaimer"> <!-- THIS MUST BE OUTSIDE THE BODY -->
+      <h6>*<mark>Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development</mark>*</h6>    
+    </div>
+  </footer>
 </html>
-
-
