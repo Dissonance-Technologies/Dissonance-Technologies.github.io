@@ -76,3 +76,38 @@ body {
 .disclaimer h6 {
     color: white;
 }
+
+.dropbtn {
+    background: none;
+    color: initial;
+}
+
+body .dropbtn {
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body .navbar a:hover,
+body .dropdown:hover .dropbtn,
+body .dropbtn:focus {
+    background: rgb(247, 0, 255);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: white;
+}
+
+body .dropdown-content {
+    background-color: #333;
+}
+
+body .dropdown-content a {
+    color: white;
+}
+
+body .navbar .dropdown .dropdown-content a:hover {
+    background-color: rgb(247, 0, 255);
+    color: white;
+}
