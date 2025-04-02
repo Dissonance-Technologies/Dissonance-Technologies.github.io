@@ -111,3 +111,22 @@ body .navbar .dropdown .dropdown-content a:hover {
     background-color: rgb(247, 0, 255);
     color: white;
 }
+
+.content #radioBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.content #radioBtn.playing {
+    background-color: #4CAF50;  /* Green */
+    color: white;
+}
+
+.content #radioBtn.paused {
+    background-color: #f44336;  /* Red */
+    color: white;
+}

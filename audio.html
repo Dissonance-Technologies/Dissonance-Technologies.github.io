@@ -63,13 +63,19 @@
       
       function radio() {
         var Radio = document.getElementById('myRadio');
+        var radioBtn = document.getElementById('radioBtn');
+        
         if (Radio.paused) {
           Radio.volume = 0.5
           Radio.play();
-          document.getElementById('radioBtn').innerText = 'Pause';
+          radioBtn.innerText = 'Pause';
+          radioBtn.classList.remove('paused');
+          radioBtn.classList.add('playing');
         } else {
           Radio.pause();
-          document.getElementById('radioBtn').innerText = 'Play';
+          radioBtn.innerText = 'Play';
+          radioBtn.classList.remove('playing');
+          radioBtn.classList.add('paused');
         }
         
         var volumeSlider = document.getElementById("volumeSlider");
