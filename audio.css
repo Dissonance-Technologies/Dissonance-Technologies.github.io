@@ -1,9 +1,53 @@
-body {
-    background-image: url('walking.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
+/* This is a comment test */
+* {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0;
 }
+  
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+mark {
+    font-style: italic;
+    font-weight: bolder;
+    background-color: none;
+}
+
+h1 { /* Header */
+    font-size: 50px;
+}
+  
+h6 { /* Disclaimer */
+    font-size: 14px;
+}
+  
+p {
+    /* font-family: verdana; */
+    font-size: 17px;
+}
+  
+.content {
+    justify-content: center;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end;   /* Align to the bottom */
+    height: 100%;
+}
+
+
 a { /* for fun */
     background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
     -webkit-background-clip: text;
@@ -13,4 +57,22 @@ a { /* for fun */
 
 #volumeSlider {
     position:inherit;
+}
+
+body {
+    background-image: url('walking.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.disclaimer mark {
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.disclaimer h6 {
+    color: white;
 }

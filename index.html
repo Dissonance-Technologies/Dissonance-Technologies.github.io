@@ -6,6 +6,7 @@
     <title>Dissonance Technologies</title> <!-- Tab Title -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js"></script>
   </head>
 
 
@@ -23,23 +24,6 @@
           .catch(error => {
             console.error("Error loading the menu: ", error);
           });
-          
-    function toggleDropdown(id) {
-      var dropdown = document.getElementById(id);
-      dropdown.classList.toggle("show");
-    }
-
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-        var dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(function(dropdown) {
-          if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-          }
-        });
-      }
-    };
- 
       </script>
     </div>
      

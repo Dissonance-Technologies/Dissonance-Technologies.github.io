@@ -4,91 +4,81 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="menu.js"></script>
     <link rel="stylesheet" href="audio.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Issa' Good Vibe Today</title>
+    <title>Vibe Check: Successful.</title>
   </head>
 
-  
-
-  <div id="navbar-container"></div>
-
-  <script>
-    //Menu functionality
-    
-    fetch('menu.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-      })
-      .catch(error => {
-        console.error("Error loading the menu: ", error);
-      });
-      
-function toggleDropdown(id) {
-  var dropdown = document.getElementById(id);
-  dropdown.classList.toggle("show");
-}
-
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-    var dropdowns = document.querySelectorAll('.dropdown-content');
-    dropdowns.forEach(function(dropdown) {
-      if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-      }
-    });
-  }
-};
-
-  </script>
-  
-  <script>
-    var volumeSlider = document.getElementById("volumeSlider");
-    var a = 0;
-    
-
-    function radio() {
-      var Radio = document.getElementById('myRadio');
-      if (Radio.paused) {
-        Radio.volume = 0.5
-        Radio.play();
-        document.getElementById('radioBtn').innerText = 'Pause';
-      } else {
-        Radio.pause();
-        document.getElementById('radioBtn').innerText = 'Play';
-      }
-      
-      var volumeSlider = document.getElementById("volumeSlider");
-      volumeSlider.addEventListener("change", function() { 
-        a = volumeSlider.value;
-        volumeSlider.innerHTML = "the js variable 'a' currently = " + a;
-        Radio.volume = parseFloat((a / 100).toFixed(2));
-      })
-    }
-
-
-    
-  </script>
-
   <body>
-    <div>
-      <button id="radioBtn" onclick="radio()">Play</button>      
+    <div id="navbar-container"></div>
+
+    <div class="content">
       <div>
-        <input type="range" id="volumeSlider" name="Volume" min="0" max="99" value="1"/>
-        
+        <button id="radioBtn" onclick="radio()">Play</button>      
+        <div>
+          <input type="range" id="volumeSlider" name="Volume" min="0" max="99" value="1"/>
+        </div>
+        <audio id="myRadio">
+          <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
-      <audio id="myRadio">
-        <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
-
-        Your browser does not support the audio element.
-      </audio>
     </div>
+
+    <footer>
+      <div class="disclaimer">
+        <h6><mark>* Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development *</mark></h6>    
+      </div>
+    </footer>
+
+    <script>
+      //Menu functionality
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => {
+          console.error("Error loading the menu: ", error);
+        });
+        
+      function toggleDropdown(id) {
+        var dropdown = document.getElementById(id);
+        dropdown.classList.toggle("show");
+      }
+
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+          var dropdowns = document.querySelectorAll('.dropdown-content');
+          dropdowns.forEach(function(dropdown) {
+            if (dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+            }
+          });
+        }
+      };
+
+      var volumeSlider = document.getElementById("volumeSlider");
+      var a = 0;
+      
+      function radio() {
+        var Radio = document.getElementById('myRadio');
+        if (Radio.paused) {
+          Radio.volume = 0.5
+          Radio.play();
+          document.getElementById('radioBtn').innerText = 'Pause';
+        } else {
+          Radio.pause();
+          document.getElementById('radioBtn').innerText = 'Play';
+        }
+        
+        var volumeSlider = document.getElementById("volumeSlider");
+        volumeSlider.addEventListener("change", function() { 
+          a = volumeSlider.value;
+          volumeSlider.innerHTML = "the js variable 'a' currently = " + a;
+          Radio.volume = parseFloat((a / 100).toFixed(2));
+        })
+      }
+    </script>
   </body>
-
-  <footer>
-    <div class="disclaimer"> <!-- THIS MUST BE OUTSIDE THE BODY -->
-      <h6>*<mark>Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development</mark>*</h6>    
-    </div>
-  </footer>
 </html>
