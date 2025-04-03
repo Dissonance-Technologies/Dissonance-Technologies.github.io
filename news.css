@@ -1,0 +1,92 @@
+* {
+    
+    color: rgb(0, 0, 0);
+}
+  
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+body {
+    background-image: url('Paper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+mark {
+    font-style: italic;
+    font-weight: bolder;
+    background-color: none;
+}
+
+h1 { /* Header */
+    font-size: 50px;
+}
+  
+h6 { /* Disclaimer */
+    font-size: 14px;
+}
+  
+p {
+    /* font-family: verdana; */
+    font-size: 17px;
+}
+  
+.content {
+    justify-content: center;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end;   /* Align to the bottom */
+    height: 100%;
+}
+
+.disclaimer mark {
+    background: black;
+
+}
+
+.disclaimer h6 {
+    color: white;
+}
+
+.dropbtn {
+    background: none;
+    color: initial;
+}
+
+body .dropbtn {
+    background: black;
+
+}
+
+body .navbar a:hover,
+body .dropdown:hover .dropbtn,
+body .dropbtn:focus {
+    background: black;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: white;
+}
+
+body .dropdown-content {
+    background-color: #333;
+}
+
+body .dropdown-content a {
+    color: white;
+}
+
+body .navbar .dropdown .dropdown-content a:hover {
+    background-color: black;
+    color: white;
+}

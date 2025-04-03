@@ -6,41 +6,38 @@
       <title>About Us</title>
       <link rel="stylesheet" href="style.css">
       <script src="menu.js"></script>
-
-      <div id="navbar-container"></div>
-
-    <script>
-      //Menu functionality
-      
-      fetch('menu.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-container').innerHTML = data;
-        })
-        .catch(error => {
-          console.error("Error loading the menu: ", error);
-        });
-        
-  function toggleDropdown(id) {
-    var dropdown = document.getElementById(id);
-    dropdown.classList.toggle("show");
-  }
-
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-      var dropdowns = document.querySelectorAll('.dropdown-content');
-      dropdowns.forEach(function(dropdown) {
-        if (dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      });
-    }
-  };
-
-    </script>
   </head>
 
   <body>
+      <div id="navbar-container"></div>
+      <script>
+        //Menu functionality
+        fetch('menu.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Error loading the menu: ", error);
+          });
+          
+        function toggleDropdown(id) {
+          var dropdown = document.getElementById(id);
+          dropdown.classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+              if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+              }
+            });
+          }
+        };
+      </script>
+
       <h1>About us</h1>
       <h2><mark>Dissonance Technologies</mark> LLC. ~ EST. 2025</h2>
       <P>
