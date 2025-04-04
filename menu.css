@@ -53,6 +53,11 @@ i {
     border-radius: 8px;
 }
 
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .dropdown-content a {
     float: none;
     color: black;
@@ -65,7 +70,7 @@ i {
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-
 .show {
     display: block;
 }
+
