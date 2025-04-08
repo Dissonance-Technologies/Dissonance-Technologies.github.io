@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-image: url('Paper.jpg');
+    background-image: url('images/Paper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
