@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Quotes</title> <!-- Tab Title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="menu.js"></script>
+  </head>
+
+
+   <body>
+    <div>
+      <div id="navbar-container">
+      </div> 
+      <script>
+        //Menu functionality
+        fetch('menu.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Error loading the menu: ", error);
+          });
+      </script>
+    </div>
+     
+    <div class="content">
+      <div class="quotes-container">
+        <h1>Looking for a quote?</h1>
+        <div class="intro-text">
+          <p>We offer customized solutions tailored to your specific needs. Our team will work with you to provide the perfect service package.</p>
+        </div>
+
+        <div class="services-section">
+          <h2>Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Web Services</h3>
+              <p>Web Design, Development, Hosting, and Maintenance</p>
+            </div>
+            <div class="service-card">
+              <h3>Computer Services</h3>
+              <p>Computer Building, Repair, Maintenance, and Upgrades</p>
+            </div>
+            <div class="service-card">
+              <h3>IT Solutions</h3>
+              <p>Managed IT Solutions</p>
+            </div>
+            <div class="service-card">
+              <h3>Backup Solutions</h3>
+              <p>Deep storage backups (Price per TB)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h2>Get Your Quote</h2>
+          <p>Contact us today for a personalized quote that meets your needs:</p>
+          <div class="contact-buttons">
+            <a href="mailto:cody@dissotech.net" class="contact-button">Email Cody</a>
+            <a href="mailto:thomas@dissotech.net" class="contact-button">Email Thomas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <footer>
+    <div class="disclaimer"> <!-- THIS MUST BE OUTSIDE THE BODY -->
+      <h6>*<mark>Legal Disclaimer - We do not own the assets displayed on this site as of right now, this website is still in development</mark>*</h6>    
+    </div>
+  </footer>
+</html>
