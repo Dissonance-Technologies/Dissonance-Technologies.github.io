@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="menu.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="audio.css">
     <title>Vibe Check: Successful.</title>
@@ -18,11 +17,10 @@
       <div>
         <button id="radioBtn" onclick="radio()">Play</button>      
         <div>
-          <input type="range" id="volumeSlider" name="Volume" min="0" max="99" value="1"/>
+          <input type="range" id="volumeSlider" name="Volume" min="0" max="100" value="50"/>
         </div>
         <audio id="myRadio">
-          <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg">
-          Your browser does not support the audio element.
+          <source src="http://we-hive.top:8000/mpd.ogg" type="audio/ogg" preload="auto">
         </audio>
       </div>
     </div>
